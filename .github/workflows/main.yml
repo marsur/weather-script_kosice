@@ -1,0 +1,17 @@
+name: Run Weather Script
+
+on:
+  workflow_dispatch:  # umožní manuálne spustenie
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pull Docker image
+        run: docker pull marsur64/weather_kosice_3_days:january2026
+
+      - name: Run script and output pocasie.txt
+        run: |
+          docker run --rm marsur64/weather_kosice_3_days:january2026 \
+          bash -c "/root/1.sh && cat /root/pocasie.txt"
