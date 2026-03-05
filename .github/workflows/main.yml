@@ -1,4 +1,4 @@
-name: Run Weather Script
+name: Run Weather Script -- uz nefunguje
 
 on:
   workflow_dispatch:  # umožní manuálne spustenie
