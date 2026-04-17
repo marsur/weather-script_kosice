@@ -1,4 +1,4 @@
-name: Run Weather Script -- uz nefunguje
+name: Run Weather Script ACII
 
 on:
   workflow_dispatch:  # umožní manuálne spustenie
@@ -9,9 +9,10 @@ jobs:
 
     steps:
       - name: Pull Docker image
-        run: docker pull marsur64/weather_kosice_3_days:february2026
+        run: docker pull marsur64/weather_kosice_3_days:april_patched_20260413
+
 
       - name: Run script and output pocasie.txt
         run: |
-          docker run --rm marsur64/weather_kosice_3_days:february2026 \
+          docker run --rm marsur64/weather_kosice_3_days:april_patched_20260413 \
           bash -c "/root/1.sh && cat /root/pocasie.txt"
