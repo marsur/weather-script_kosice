@@ -15,4 +15,4 @@ jobs:
       - name: Run script and output pocasie.txt
         run: |
           docker run --rm marsur64/asci_weather_kosice:15062026 \
-          bash -c "/root/1.sh && cat /root/pocasie.txt"
+          sh -c "/root/1.sh && cat /root/pocasie.txt"
