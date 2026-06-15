@@ -1,4 +1,4 @@
-name: Run Weather Script ACII
+name: Run Weather Script ASCII
 
 on:
   workflow_dispatch:  # umožní manuálne spustenie
