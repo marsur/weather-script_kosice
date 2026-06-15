@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Pull Docker image
-        run: docker pull marsur64/weather_kosice_3_days:april_patched_20260413
+        run: docker pull marsur64/asci_weather_kosice:15062026
 
 
       - name: Run script and output pocasie.txt
         run: |
-          docker run --rm marsur64/weather_kosice_3_days:april_patched_20260413 \
+          docker run --rm marsur64/asci_weather_kosice:15062026 \
           bash -c "/root/1.sh && cat /root/pocasie.txt"
